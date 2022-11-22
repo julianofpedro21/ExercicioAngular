@@ -1,0 +1,15 @@
+
+<form [formGroup]="IMCForm" (ngSubmit)="onSubmit()">
+    <label for="altura">Altura em cm: </label>
+    <input id="altura" class="form-control" type="text" placeholder="Digite a sua altura" style="width: 300px;" formControlName="altura">
+    <br>
+    <label for="peso">Peso: </label>
+    <input id="peso" class="form-control" type="text" placeholder="Digite o seu peso" style="width: 300px;" formControlName="peso">
+    <br>
+    <button type="submit" onclick="onSubmit()">Calcular</button>    
+
+    <br>
+
+    <th ngClass="{{result}}">{{resultado}}</th>
+</form>
+
