@@ -1,1 +1,20 @@
-<p>exercicio03 works!</p>
+
+<input placeholder="Numero 1" type="text" style="width: 300px;" class="form-control"  [(ngModel)]="num1"/>
+<br>
+
+<input  placeholder="Numero 2" type="text" style="width: 300px;" class="form-control"  [(ngModel)]="num2"/>
+<br><br>
+
+<span>Selecione uma operação</span>
+<br>
+<select id="operacao" [(ngModel)]="operacao" (select)="1">
+    <option value="+">Soma</option>
+    <option value="-">Subtração</option>
+    <option value="*">Multiplicação</option>
+    <option value="/">Divisão</option>
+</select>
+<br><br>
+<button (click)="calcula()">Calcular</button>
+<button (click)="limpa()">Limpar</button>
+<br><br>
+<p> Resultado: {{resultado}}</p>

@@ -1,1 +1,20 @@
-<p>exercicio02 works!</p>
+<form [formGroup]="ListaForm" class="form-control" (ngSubmit)="onSubmit()">
+
+    <input class="form-control" type="text" style="width: 900px;" formControlName="texto" [(ngModel)]="texto" >
+    <br>
+    <button class="btn btn-primary" type="submit" onclick="onSubmit()">Adicionar</button>
+</form>
+<br>
+<br>
+<br>
+
+<hr>
+
+<ol>
+        <li *ngFor="let t of tarefa" class="input-group mb-2" style="align-items: center;">
+            <p (click)="realizado(t)" class="{{t.status}}" >{{t.texto}}</p>
+            <button style="margin-left: 20px;" class="btn btn-outline-info btn-sm"  (click)="remover(t)">Excluir</button>
+            
+        </li>
+    
+</ol>
